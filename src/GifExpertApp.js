@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
+import { AddCategory } from './components/AddCategory';
 
 export const GifExpertApp = () => {
 
-  // const categories = ;
   const [categories, setCategories] = useState(['LOTR', 'Hobbit', 'Silmarillion']);
 
-  const handleAdd = () => {
-    setCategories(cats => [...cats, 'Elfs']);
-  }
+  // const handleAdd = () => {
+  //   setCategories(cats => [...cats, 'Elfs']);
+  // }
 
   return (
     <>
       <h2>GifExpertApp</h2>
+      <AddCategory />
       <hr />
-
-      <button onClick={handleAdd}>Add</button>
 
       <ol>
         {categories.map(category => {
@@ -25,5 +24,3 @@ export const GifExpertApp = () => {
     </>
   )
 }
-
-export default GifExpertApp;
